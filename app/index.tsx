@@ -1,4 +1,10 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  StatusBar,
+} from "react-native";
 import React from "react";
 import { useAssets } from "expo-asset";
 import { ResizeMode, Video } from "expo-av";
@@ -10,6 +16,7 @@ const index = () => {
 
   return (
     <>
+      <StatusBar barStyle="light-content" />
       <View style={styles.container}>
         {assets && (
           <Video

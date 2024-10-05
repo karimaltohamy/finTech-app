@@ -52,8 +52,8 @@ export const defaultStyles = StyleSheet.create({
     marginBottom: 10,
   },
   block: {
-    marginHorizontal: 20,
-    padding: 14,
+    marginVertical: 10,
+    padding: 20,
     backgroundColor: "#fff",
     borderRadius: 16,
     gap: 20,

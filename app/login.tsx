@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Platform,
   Alert,
+  StatusBar,
 } from "react-native";
 import React, { useState } from "react";
 import { defaultStyles } from "@/constants/Styles";
@@ -56,6 +57,7 @@ const login = () => {
       behavior="padding"
       keyboardVerticalOffset={keyboardVerticalOffset}
     >
+      <StatusBar barStyle="dark-content" />
       <View style={defaultStyles.container}>
         <Text style={defaultStyles.header}>Let's get started!</Text>
         <Text style={defaultStyles.descriptionText}>

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Platform,
   ScrollView,
+  StatusBar,
 } from "react-native";
 import React, { useState } from "react";
 import { defaultStyles } from "@/constants/Styles";
@@ -52,6 +53,7 @@ const signUp = () => {
       behavior="padding"
       keyboardVerticalOffset={keyboardVerticalOffset}
     >
+      <StatusBar barStyle="dark-content" />
       <ScrollView>
         <View style={defaultStyles.container}>
           <Text style={defaultStyles.header}>Let's get started!</Text>

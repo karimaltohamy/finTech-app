@@ -1,13 +1,15 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { TextInput } from "react-native-gesture-handler";
 import Colors from "@/constants/Colors";
 import { BlurView } from "expo-blur";
+import { useRouter } from "expo-router";
 
 const CustomHeader = () => {
   const { top } = useSafeAreaInsets();
+  const router = useRouter();
 
   return (
     <BlurView
@@ -25,9 +27,12 @@ const CustomHeader = () => {
           { paddingBottom: 12, backgroundColor: "transparent" },
         ]}
       >
-        <View style={styles.circle}>
+        <TouchableOpacity
+          onPress={() => router.push("/(authenticated)/(modals)/account")}
+          style={styles.circle}
+        >
           <Text className="font-bold text-white">KA</Text>
-        </View>
+        </TouchableOpacity>
         <View style={styles.search}>
           <Ionicons name="search" size={24} />
           <TextInput placeholder="Search" />
